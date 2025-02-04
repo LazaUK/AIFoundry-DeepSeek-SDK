@@ -15,5 +15,23 @@
 ## Scenario 1: Logical Puzzle
 Solving the following logical puzzle:
 > Alice, Bob, and Carol each have a different favorite color: red, blue, or green.  Alice doesn't like red. Bob's favorite color is not blue. Carol's favorite color is red. What is each person's favorite color? Explain your reasoning step by step.
+1. Initialise Azure AI Inference client with DeepSeek R1's deployment endpoint and Azure credentails:
+``` Python
+client = ChatCompletionsClient(
+    endpoint = DS_Endpoint,
+    credential = Az_Credential
+)
+```
+2. _complete_ function allows you to pass system / user messages, enable streaming, restrict volume of the model's output (completion) and configure other inference parameters:
+``` Python
+response = client.complete(
+    messages = [
+        System_Message,
+        User_Message,
+    ],
+    max_tokens = 2048,
+    stream = True
+)
+```
 
 ## Scenario 2: DeepSeek R1 with OpenAI SDK
