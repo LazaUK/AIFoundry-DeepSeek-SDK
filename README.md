@@ -10,7 +10,20 @@
 - [Scenario 2: DeepSeek R1 with OpenAI SDK]()
 
 ## Pre-requisites
-1. You can deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
+1. Deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
+2. Add required environment variables:
+
+| Environment Variable | Description |
+| --- | --- |
+| ```AZURE_FOUNDRY_DEEPSEEK``` | Deployment name of the **_DeepSeek R1_** model |
+| `````` |  |
+
+3. Install the required Python packages using the **pip** command and the provided requirements.txt file:
+``` PowerShell
+pip install -r requirements.txt
+```
+> [!NOTE]
+> Jupyter notebooks utilise the _DefaultAzureCredential_ class. Depending on your environment, the Python code will search for available Azure identities in the order described [here](https://learn.microsoft.com/en-us/python/api/azure-identity/azure.identity.defaultazurecredential?view=azure-python).
 
 ## Scenario 1: Logical Puzzle
 Solving the following logical puzzle:
