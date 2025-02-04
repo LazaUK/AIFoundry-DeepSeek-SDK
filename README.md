@@ -26,8 +26,6 @@ pip install -r requirements.txt
 > Jupyter notebooks utilise the _DefaultAzureCredential_ class. Depending on your environment, the Python code will search for available Azure identities in the order described [here](https://learn.microsoft.com/en-us/python/api/azure-identity/azure.identity.defaultazurecredential?view=azure-python).
 
 ## Scenario 1: Logical Puzzle
-Solving the following logical puzzle:
-> Alice, Bob, and Carol each have a different favorite color: red, blue, or green.  Alice doesn't like red. Bob's favorite color is not blue. Carol's favorite color is red. What is each person's favorite color? Explain your reasoning step by step.
 1. Initialise Azure AI Inference client with DeepSeek R1's deployment endpoint and Azure credentails:
 ``` Python
 client = ChatCompletionsClient(
@@ -46,5 +44,8 @@ response = client.complete(
     stream = True
 )
 ```
+> [!NOTE]
+> Solving the following logical puzzle:
+> _Alice, Bob, and Carol each have a different favorite color: red, blue, or green.  Alice doesn't like red. Bob's favorite color is not blue. Carol's favorite color is red. What is each person's favorite color? Explain your reasoning step by step._
 
 ## Scenario 2: DeepSeek R1 with OpenAI SDK
