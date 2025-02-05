@@ -8,12 +8,11 @@
 
 ## Pre-requisites
 1. Deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
-2. Add required environment variables:
+2. Add required environment variable:
 
 | Environment Variable | Description |
 | --- | --- |
 | ```AZURE_FOUNDRY_DEEPSEEK``` | Deployment name of the **_DeepSeek R1_** model |
-| `````` |  |
 
 3. Install the required Python packages using the **pip** command and the provided requirements.txt file:
 ``` PowerShell
@@ -68,3 +67,37 @@ chain.invoke(applicant_info)
 ```
 > [!NOTE]
 > System prompt: _You are a financial advisor at a bank. You need to decide whether to approve a loan application. Consider the following applicant information: {applicant_info}. Provide your decision (approve or deny) AND a detailed explanation of your reasoning, including specific factors you considered and how they influenced your decision. Be transparent and thorough, as this is for a regulated industry._
+
+## Scenario 3: RAG for Quantum Computing research in Arxiv
+1. Define DeepSeek R1 model as an LLM for LangChain:
+``` Python
+model = AzureAIChatCompletionsModel(
+    endpoint = DS_Endpoint,
+    credential = Az_Credential
+)
+```
+2. Define Arxiv document retrieval
+``` Python
+arxiv_retriever = ArxivRetriever(
+    load_max_docs=2,
+    get_ful_documents=True,
+)
+```
+3. Define research paper analysis as a Prompt Template for Langchain:
+``` Python
+prompt_template = PromptTemplate(
+    input_variables = ["query", "relevant_info"],
+    template = """
+    ...
+    """
+)
+```
+4. Configure and invoke the chain
+``` Python
+chain = prompt_template | model
+relevant_papers = arxiv_retriever.invoke(query)
+relevant_info = "\n".join([paper.page_content for paper in relevant_papers])
+chain.invoke({"query": query, "relevant_info": relevant_info})
+```
+> [!NOTE]
+> System prompt: _You are an expert scientific researcher. Use the following information from arXiv to answer the user's question. If there is no sufficient information, say 'I need more information to answer this question'. Question: {query} Relevant Information: {relevant_info} Answer:_
