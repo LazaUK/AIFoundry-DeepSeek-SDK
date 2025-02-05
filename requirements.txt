@@ -1,0 +1,6 @@
+azure-ai-inference
+azure-identity
+langchain-core
+langchain-azure-ai
+langchain-community
+arxiv
