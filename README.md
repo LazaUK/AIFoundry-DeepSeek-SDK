@@ -67,4 +67,4 @@ chain = loan_approval_prompt | model
 chain.invoke(applicant_info)
 ```
 > [!NOTE]
-> Solving the following logical puzzle: _You are a financial advisor at a bank. You need to decide whether to approve a loan application. Consider the following applicant information: {applicant_info}. Provide your decision (approve or deny) AND a detailed explanation of your reasoning, including specific factors you considered and how they influenced your decision. Be transparent and thorough, as this is for a regulated industry._
+> System prompt: _You are a financial advisor at a bank. You need to decide whether to approve a loan application. Consider the following applicant information: {applicant_info}. Provide your decision (approve or deny) AND a detailed explanation of your reasoning, including specific factors you considered and how they influenced your decision. Be transparent and thorough, as this is for a regulated industry._
