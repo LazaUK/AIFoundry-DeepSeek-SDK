@@ -2,9 +2,9 @@
 [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1) is a large language model (LLM) focused on reasoning and code generation, with a large context window intended for handling extended interactions.  This repo provides code examples demonstrating its use in Azure AI Foundry with **Azure AI Python SDK** / **LangChain**.
 
 ## Table of contents:
-- [Pre-requisites]()
-- [Scenario 1: Logical Puzzle]()
-- [Scenario 2: Financial Loan Approval]()
+- [Pre-requisites](#pre-requisites)
+- [Scenario 1: Logical Puzzle](#scenario-1-logical-puzzle)
+- [Scenario 2: Financial Loan Approval](#scenario-2-financial-loan-approval)
 
 ## Pre-requisites
 1. Deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
