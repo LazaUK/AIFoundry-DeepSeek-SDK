@@ -1,4 +1,4 @@
-# Azure AI Foundry: Using DeepSeek R1 with Azure AI Python SDK
+# Azure AI Foundry: Using DeepSeek R1 with Azure AI Python SDK / LangChain
 [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1) is a large language model (LLM) focused on reasoning and code generation, with a large context window intended for handling extended interactions.  This repo provides code examples demonstrating its use in Azure AI Foundry with **Azure AI Python SDK** / **LangChain**.
 
 ## Table of contents:
