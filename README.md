@@ -5,6 +5,7 @@
 - [Pre-requisites](#pre-requisites)
 - [Scenario 1: Logical Puzzle](#scenario-1-logical-puzzle)
 - [Scenario 2: Financial Loan Approval](#scenario-2-financial-loan-approval)
+- [## Scenario 3: RAG for Quantum Computing in Arxiv]()
 
 ## Pre-requisites
 1. Deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
@@ -68,7 +69,7 @@ chain.invoke(applicant_info)
 > [!NOTE]
 > System prompt: _You are a financial advisor at a bank. You need to decide whether to approve a loan application. Consider the following applicant information: {applicant_info}. Provide your decision (approve or deny) AND a detailed explanation of your reasoning, including specific factors you considered and how they influenced your decision. Be transparent and thorough, as this is for a regulated industry._
 
-## Scenario 3: RAG for Quantum Computing research in Arxiv
+## Scenario 3: RAG for Quantum Computing in Arxiv
 1. Define DeepSeek R1 model as an LLM for LangChain:
 ``` Python
 model = AzureAIChatCompletionsModel(
