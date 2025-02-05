@@ -5,7 +5,7 @@
 - [Pre-requisites](#pre-requisites)
 - [Scenario 1: Logical Puzzle](#scenario-1-logical-puzzle)
 - [Scenario 2: Financial Loan Approval](#scenario-2-financial-loan-approval)
-- [## Scenario 3: RAG for Quantum Computing in Arxiv]()
+- [Scenario 3: RAG for Quantum Computing in Arxiv](#scenario-3-rag-for-quantum-computing-in-arxiv)
 
 ## Pre-requisites
 1. Deploy _DeepSeek R1_ from Azure AI Foundry's model catalog as a serverless API. Specifics of the deployment process is described [here](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless).
