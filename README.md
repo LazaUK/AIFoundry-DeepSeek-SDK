@@ -42,7 +42,7 @@ response = client.complete(
 )
 ```
 > [!NOTE]
-> User prompt: _Alice, Bob and Carol each have a different favorite colour: red, blue or green.  Alice doesn't like red. Bob's favorite colour is not blue. Carol's favorite colour is red. What is each person's favorite colour? Explain your reasoning step by step._
+> User prompt: _Alice, Bob and Carol each have a different favourite colour: red, blue or green. Alice doesn't like red. Bob's favourite colour is not blue. Carol's favourite colour is red. What is each person's favourite colour? Explain your reasoning step by step._
 
 ## Scenario 2: Financial Loan Approval
 1. Define DeepSeek R1 model as an LLM for LangChain:
